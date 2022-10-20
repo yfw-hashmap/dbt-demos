@@ -62,9 +62,9 @@ models:
           - not_null:
               severity: warn
           - relationships:
-              - to: ref('customer_nation_region')
-                field: nation_key
-                severity: warn
+              to: ref('customer_nation_region')
+              field: nation_key
+              severity: warn
 
   - name: analytics_view
     description: "{{ doc('doc_analytics_view') }}"
