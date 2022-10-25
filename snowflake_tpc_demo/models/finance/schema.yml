@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: finance
-    schema: "{{ env_var('SNOWSQL_SCHEMA') }}"
+    schema: "{{ env_var('DBT_SNOWSQL_SCHEMA') }}"
     tables:
       - name: TRANSACTIONS
         freshness: # default freshness

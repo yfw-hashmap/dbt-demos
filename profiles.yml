@@ -12,14 +12,14 @@ default:
   outputs:
     default:
       type: snowflake
-      account: "{{ env_var('SNOWSQL_ACCOUNT') }}"
-      user: "{{ env_var('SNOWSQL_USER') }}"
-      password: "{{ env_var('SNOWSQL_PWD') }}"
-      role: "{{ env_var('SNOWSQL_ROLE') }}"
-      database: "{{ env_var('SNOWSQL_DATABASE') }}"
-      schema: "{{ env_var('SNOWSQL_SCHEMA') }}"
-      warehouse: "{{ env_var('SNOWSQL_WAREHOUSE') }}"
-      threads: 1
+      account: "{{ env_var('DBT_SNOWSQL_ACCOUNT') }}"
+      user: "{{ env_var('DBT_SNOWSQL_USER') }}"
+      password: "{{ env_var('DBT_SNOWSQL_PWD') }}"
+      role: "{{ env_var('DBT_SNOWSQL_ROLE') }}"
+      database: "{{ env_var('DBT_SNOWSQL_DATABASE') }}"
+      schema: "{{ env_var('DBT_SNOWSQL_SCHEMA') }}"
+      warehouse: "{{ env_var('DBT_SNOWSQL_WAREHOUSE') }}"
+      threads: 4
       client_session_keep_alive: False
 
 local:
@@ -27,12 +27,12 @@ local:
   outputs:
     default:
       type: snowflake
-      account: "{{ env_var('SNOWSQL_ACCOUNT') }}"
-      user: "{{ env_var('SNOWSQL_USER') }}"
+      account: "{{ env_var('DBT_SNOWSQL_ACCOUNT') }}"
+      user: "{{ env_var('DBT_SNOWSQL_USER') }}"
       authenticator: externalbrowser
-      role: "{{ env_var('SNOWSQL_ROLE') }}"
-      database: "{{ env_var('SNOWSQL_DATABASE') }}"
-      warehouse: "{{ env_var('SNOWSQL_WAREHOUSE') }}"
+      role: "{{ env_var('DBT_SNOWSQL_ROLE') }}"
+      database: "{{ env_var('DBT_SNOWSQL_DATABASE') }}"
+      warehouse: "{{ env_var('DBT_SNOWSQL_WAREHOUSE') }}"
       schema: PUBLIC
       threads: 1
       client_session_keep_alive: True

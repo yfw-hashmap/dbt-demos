@@ -2,7 +2,7 @@
 
     {{
         config(
-          target_schema=env_var('SNOWSQL_SCHEMA'),
+          target_schema=env_var('DBT_SNOWSQL_SCHEMA'),
           strategy='check',
           unique_key='ACCOUNT_ID',
           check_cols='all',
