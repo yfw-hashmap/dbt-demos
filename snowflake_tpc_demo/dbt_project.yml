@@ -19,7 +19,7 @@ model-paths: ["models"]
 docs-paths: ["docs"]
 analysis-paths: ["analysis"] 
 test-paths: ["tests"]
-seed-paths: ["data"]
+seed-paths: ["seeds"]
 macro-paths: ["macros"]
 
 target-path: "target"  # directory which will store compiled SQL files
@@ -39,4 +39,6 @@ models:
     tpc_h:
       enabled: true
       materialized: table
-
+    finance:
+      enabled: true
+      materialized: table
